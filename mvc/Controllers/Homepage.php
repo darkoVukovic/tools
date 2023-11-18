@@ -3,7 +3,7 @@
 use core\MainController;
 
     class Homepage extends MainController {
-
+        
 
         public function index () {
            $this->view->renderView('homepage');
@@ -15,7 +15,6 @@ use core\MainController;
         } 
 
         public function test () {
-          echo "test";
-
+            echo "12312";
         } 
     }   

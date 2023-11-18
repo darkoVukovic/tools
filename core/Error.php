@@ -13,5 +13,10 @@ class Error  {
        $view = new View();
         return $view->renderView('MethodDoesNotExist');
     } 
+    public static  function ClassDoesNotExist () {
+        $view = new View();
+         return $view->renderView('classDoesNotExist');
+     } 
+
  
 }
