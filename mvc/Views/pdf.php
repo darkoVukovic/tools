@@ -7,9 +7,8 @@
     <title>Pdf Converter</title>
 </head>
 <body>
-    <?php 
-    include_once(ROOTDIR.'/mvc/Views/basic/header.php');
-    ?>
+<?php  loadView('/basic/header', ['title' => 'export to pdf']); ?>
+
 
 <main>
     <div>

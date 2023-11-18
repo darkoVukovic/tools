@@ -1,6 +1,7 @@
 <?php 
 // file that is been initialized during every request
 require_once '../vendor/autoload.php';
+require_once '../core/helpers.php';
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
 

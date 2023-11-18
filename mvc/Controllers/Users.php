@@ -12,5 +12,9 @@ use core\MainController;
             $this->view->renderView('users', $data);
         } 
 
+
+        public function show () {
+            echo "show user ";
+        } 
     
     }   

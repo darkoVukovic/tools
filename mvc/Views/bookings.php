@@ -7,8 +7,8 @@
     <title>Tools</title>
 </head>
 <body>
-    <?php  loadView('/basic/header', ['title' => 'tools', 'links' => [['href' => 'excel', 'name' => 'excel'], ['href' => 'pdf', 'name' => 'pdf']]]); ?>
 
+    <?php  loadView('/basic/header', ['title' => 'bookings', 'links' => $links]); ?>
 
     <?php  loadView('/basic/footer'); ?>    
 

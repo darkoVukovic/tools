@@ -8,6 +8,11 @@ function doesMethodExist($class, $method) {
     return true;
 }
 
+function doesClassExist($class) {
+    if(!class_exists(CONTROLLER_NAMESPACE. '\\'. $class))    return Error::ClassDoesNotExist();
+    return true;
+}
+
 function loadView($name, $args = null) {
     $view = new View();
     return $view->renderView($name, $args);

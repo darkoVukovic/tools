@@ -7,9 +7,8 @@
     <title>Excel Table</title>
 </head>
 <body>
-<?php 
-    include_once(ROOTDIR.'/mvc/Views/basic/header.php');
-    ?>
+<?php  loadView('/basic/header', ['title' => 'export to excel']); ?>
+
 
     <h3>Excel Table</h3>
     <table>

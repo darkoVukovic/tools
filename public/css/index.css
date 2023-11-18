@@ -8,16 +8,24 @@ body {
     position: relative;
     min-height: 100vh;
 }
+
 header {
     width: 100%;
     height: 100px;
     background-color: #333;
     color: #ccc;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
+.headerWlinks {
+    justify-content: space-around;
 
+}
+
+.headerNLinks {
+    justify-content: center;
+
+}
 
 
 footer {
@@ -28,3 +36,18 @@ footer {
     height: 100px;
     background-color: #333;
 }
+
+
+header ul {
+    display: flex;
+    text-decoration: underline;
+    list-style: none;
+}
+
+header ul li {
+    padding: 0 20px;
+}
+header ul li a {
+    color: #ccc;
+}   
+
