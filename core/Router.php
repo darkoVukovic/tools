@@ -58,7 +58,9 @@ require_once '../core/Constants.php';
             if(is_array($arguments) && count($arguments) > 0) {
               return  $class->$method($arguments);
             } else return $class->$method();  
-          } 
+          } else {
+            return false;
+          }
         }
         // if route does not have params in uri
         else {

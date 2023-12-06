@@ -17,4 +17,13 @@ use core\MainController;
         public function test () {
             echo "12312";
         } 
+
+        public function quicksort () {
+            $nums = [5,2 ,3, 1, 6]; 
+            $l= 0;
+            $h = count($nums) -1;
+            sortIt($nums, $l, $h);
+
+            print_r($nums);
+        } 
     }   

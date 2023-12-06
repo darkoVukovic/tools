@@ -39,3 +39,44 @@ function getAllRoutes($method) {
  
  
 }
+
+	
+function sortIt(&$nums, $l, $h) {
+
+    if($l < $h) {
+        $j = partitioning($nums, $l, $h);
+        sortIt($nums, $l, $j);
+        sortIt($nums, $j+ 1, $h);
+    }
+}
+
+
+function partitioning(&$nums, $l, $h) {
+    $count = $l+$h;
+
+$pivot = $nums[0];
+$i = $l; // i je poceetni index = 0
+$j = $h; // j je poslednji index count(arr) - 1
+
+while ($i < $j) {   
+    do {
+        $i++;
+    }while ($nums[$i] <= $pivot);
+
+    do {
+        $j--;
+     }while ($nums[$j] > $pivot);
+
+    if ($i <= $j) {
+        $tmp = $nums[$i];
+        $nums[$i] = $nums[$j];
+        $nums[$j] = $tmp;
+    }
+ } 
+    $tmp = $nums[$l];
+    $nums[$l] = $nums[$j];
+    $nums[$j] = $tmp;
+    return $j;
+}
+
+

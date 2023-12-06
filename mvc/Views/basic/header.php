@@ -6,7 +6,6 @@
         if(isset($links)) {
             foreach($links as $link) {
                 ?>
-                    
                     <li><a href="<?= $link['href']?>"><?= $link['name'] ?></a></li>
                 <?php
             }

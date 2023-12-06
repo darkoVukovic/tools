@@ -9,24 +9,26 @@
 <body>
 <?php  loadView('/basic/header', ['title' => 'export to excel']); ?>
 
+    <p>Select database table </p>
+    <ul>
 
-    <h3>Excel Table</h3>
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Category Name</th>
-        </tr>
-        <?php 
-            foreach($items as $item) {
-                echo "<tr>
-                    <td>".$item['id_shopCategory']."</td>
-                    <td>".$item['name']."</td>
-                    </tr>";
-            }
-        ?>
-    </table>
+
+    <?php 
+        
+        foreach($tables as $table) {
+            ?>
+                <li><a href="?table=<?= $table?>"><?= $table ?></a></li>
+            <?php
+        }
+    ?>
+        </ul>
+    <?php  if(isset($items) && isset($_GET['table'])) {
+             loadView('table', ['keys' => $items['columnNames'], 'items' => $items]); 
+    }
+    ?>
 
     <form action="excel/export" method="POST">
+        <input type="hidden" name="table" value="<?= $_GET['table'] ?? '' ?>">
         <input type="submit" name="export_excel" value='export to excel'>
     </form>
 <?php 
