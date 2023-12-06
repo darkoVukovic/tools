@@ -20,8 +20,6 @@ if(isset($_GET['code'])) {
         $userInfo = $oauth2Service->userinfo->get();
         $name = $userInfo->getName();
         $email = $userInfo->getEmail();
-
-        
         header('Location: http://tools/bookings');
         exit();
     }
